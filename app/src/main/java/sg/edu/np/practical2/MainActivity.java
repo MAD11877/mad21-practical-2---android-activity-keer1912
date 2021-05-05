@@ -16,13 +16,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView name = findViewById(R.id.name);
         TextView describe = findViewById(R.id.describe);
         Log.d("debug","create");
 
         Button followBtn = findViewById(R.id.follow_btn);
         User user = new User();
+        user.name = "MAD";
+        user.description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
+        user.id = 1;
         user.followed = false;
+
+        TextView name = findViewById(R.id.name);
+        name.setText(user.name);
+        TextView description = findViewById(R.id.describe);
+        description.setText(user.description);
 
         followBtn.setOnClickListener(new View.OnClickListener() {
             @Override

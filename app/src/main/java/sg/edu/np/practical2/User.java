@@ -1,8 +1,8 @@
 package sg.edu.np.practical2;
 
 public class User {
-    String name;
-    String description;
-    Integer id;
-    Boolean followed;
+    public String name;
+    public String description;
+    public int id;
+    public boolean followed;
 }
